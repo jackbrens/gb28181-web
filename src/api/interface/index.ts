@@ -37,7 +37,7 @@ export namespace Login {
     password: string;
   }
   export interface ResLogin {
-    access_token: string;
+    accessToken: string;
   }
   export interface ResAuthButtons {
     [key: string]: string[];
@@ -86,5 +86,17 @@ export namespace User {
     id: string;
     name: string;
     children?: ResDepartment[];
+  }
+}
+
+export namespace Device {
+  export interface ReqUserParams extends ReqPage {
+    username: string;
+    gender: number;
+    idCard: string;
+    email: string;
+    address: string;
+    createTime: string[];
+    status: number;
   }
 }
